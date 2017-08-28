@@ -1,7 +1,13 @@
-from fabric.api import run
+#!/usr/bin/env python2
+
+# from fabric.api import *
+from fabric.api import run, local
+
+def who():
+    local('whoami')
 
 def host_type():
-        run('uname -s')
+    run('uname -s')
 
 def hello():
     print("Hello, hi!")
