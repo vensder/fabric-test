@@ -24,3 +24,12 @@ def load():
     print("Load average for past  1 min: %s" % la[0])
     print("Load average for past  5 min: %s" % la[1])
     print("Load average for past 15 min: %s" % la[2])
+
+def la():
+    la = run('cat /proc/loadavg').split()
+    print("Load average for past  1 min: %s" % la[0])
+    print("Load average for past  5 min: %s" % la[1])
+    print("Load average for past 15 min: %s" % la[2])
+    proc = la[3].split('/')
+    print("Currently running processes: %s" % proc[0])
+    print("Total number of processes: %s" % proc[1])
